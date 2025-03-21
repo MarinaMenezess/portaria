@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Condomínio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <form id="cadastroForm" method="POST" action="#">
+        <label for="nomeMorador">Nome do Morador:</label>
+        <input type="text" id="nomeMorador" name="nome" placeholder="Insira o nome do morador" required aria-label="Nome do morador">
+
+        <label for="bloco">Bloco:</label>
+        <input type="text" id="bloco" name="bloco" placeholder="Insira o bloco" required aria-label="Bloco">
+
+        <label for="apto">Apartamento:</label>
+        <input type="text" id="apto" name="apartamento" placeholder="Insira o apartamento" required aria-label="Número do apartamento">
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="Insira o número de telefone" required aria-label="Número de telefone">
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Insira o e-mail" required aria-label="E-mail">
+
+        <label for="status">Qual a relação com o imóvel?</label>
+        <select id="status" name="status" required aria-label="Status no imóvel">
+            <option value="residente">Residente</option>
+            <option value="proprietário">Proprietário</option>
+            <option value="visitante">Visitante</option>
+        </select>
+
+        <button type="submit" id="cadastro">Cadastrar</button>
+    </form>
+
+    <script src="cadastro.js"></script>
+</body>
+</html>
