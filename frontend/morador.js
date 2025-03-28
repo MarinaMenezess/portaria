@@ -99,3 +99,26 @@ async function excluirVeiculo(id) {
     alert(`Erro: ${resultado.erro}`);
   }
 }
+
+document.getElementById("excluirMorador").addEventListener("click", async () => {
+  const confirma = confirm("Deseja realmente excluir este morador? Todos os veículos associados também serão removidos.");
+  if (!confirma) return;
+
+  try {
+    const resposta = await fetch(`http://localhost:3000/moradores/${moradorId}`, {
+      method: "DELETE"
+    });
+    const resultado = await resposta.json();
+
+    if (resposta.ok) {
+      alert("Morador excluído com sucesso!");
+      window.location.href = "listagem.html";
+    } else {
+      alert(`Erro: ${resultado.erro}`);
+    }
+  } catch (erro) {
+    alert("Erro ao excluir morador.");
+    console.error(erro);
+  }
+});
+
