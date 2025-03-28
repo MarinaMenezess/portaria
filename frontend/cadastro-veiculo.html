@@ -7,30 +7,39 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Cadastro de Veículo</h1>
+  <header>
+    <a href="listagem.html"><img src="./assets/condosys.svg" alt="portaria logo" id="logo-header"></a>
+    <div id="navegacao">
+        <a href="cadastro.html"><button>Adicionar Morador</button></a>
+        <a href="cadastro-veiculo.html"><button>Adicionar Veículo</button></a>        
+    </div>
+  </header>
+  <main>
+    <h1>Cadastro de Veículo</h1>
 
-  <form id="veiculoForm">
-    <input type="hidden" id="veiculoId" />
+    <form id="veiculoForm">
+      <input type="hidden" id="veiculoId" />
 
-    <label for="placa">Placa:</label>
-    <input type="text" id="placa" name="placa" placeholder="Placa do veículo" required />
+      <label for="placa">Placa:</label>
+      <input type="text" id="placa" name="placa" placeholder="Placa do veículo" required />
 
-    <label for="modelo">Modelo:</label>
-    <input type="text" id="modelo" name="modelo" placeholder="Modelo do veículo" required />
+      <label for="modelo">Modelo:</label>
+      <input type="text" id="modelo" name="modelo" placeholder="Modelo do veículo" required />
 
-    <label for="cor">Cor:</label>
-    <input type="text" id="cor" name="cor" placeholder="Cor do veículo" required />
+      <label for="cor">Cor:</label>
+      <input type="text" id="cor" name="cor" placeholder="Cor do veículo" required />
 
-    <label for="box">Número da vaga (Box):</label>
-    <input type="text" id="box" name="box" placeholder="Ex: A12" required />
+      <label for="box">Número da vaga (Box):</label>
+      <input type="text" id="box" name="box" placeholder="Ex: A12" required />
 
-    <label for="morador">Morador:</label>
-    <select id="morador" name="morador_id" required>
-      <option value="">Selecione um morador</option>
-    </select>
+      <label for="morador">Morador:</label>
+      <select id="morador" name="morador_id" required>
+        <option value="">Selecione um morador</option>
+      </select>
 
-    <button type="submit">Cadastrar Veículo</button>
-  </form>
+      <button type="submit">Cadastrar Veículo</button>
+    </form>
+  </main>
 
   <script src="cadastro-veiculo.js"></script>
 </body>

@@ -7,32 +7,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Cadastro</h1>
-    <form id="cadastroForm" method="POST" action="#">
-        <label for="nomeMorador">Nome do Morador:</label>
-        <input type="text" id="nomeMorador" name="nome" placeholder="Insira o nome do morador" required aria-label="Nome do morador">
+    <header>
+        <a href="listagem.html"><img src="./assets/condosys.svg" alt="portaria logo" id="logo-header"></a>
+        <div id="navegacao">
+            <a href="cadastro.html"><button>Adicionar Morador</button></a>
+            <a href="cadastro-veiculo.html"><button>Adicionar Veículo</button></a>        
+        </div>
+    </header>
+    <main>
+        <h1>Cadastro</h1>
+        <form id="cadastroForm" method="POST" action="#">
+            <label for="nomeMorador">Nome do Morador:</label>
+            <input type="text" id="nomeMorador" name="nome" placeholder="Insira o nome do morador" required aria-label="Nome do morador">
 
-        <label for="bloco">Bloco:</label>
-        <input type="text" id="bloco" name="bloco" placeholder="Insira o bloco" required aria-label="Bloco">
+            <label for="bloco">Bloco:</label>
+            <input type="text" id="bloco" name="bloco" placeholder="Insira o bloco" required aria-label="Bloco">
 
-        <label for="apto">Apartamento:</label>
-        <input type="text" id="apto" name="apartamento" placeholder="Insira o apartamento" required aria-label="Número do apartamento">
+            <label for="apto">Apartamento:</label>
+            <input type="text" id="apto" name="apartamento" placeholder="Insira o apartamento" required aria-label="Número do apartamento">
 
-        <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone" placeholder="Insira o número de telefone" required aria-label="Número de telefone">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="Insira o número de telefone" required aria-label="Número de telefone">
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" placeholder="Insira o e-mail" required aria-label="E-mail">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Insira o e-mail" required aria-label="E-mail">
 
-        <label for="status">Qual a relação com o imóvel?</label>
-        <select id="status" name="status" required aria-label="Status no imóvel">
-            <option value="residente">Residente</option>
-            <option value="proprietário">Proprietário</option>
-            <option value="visitante">Visitante</option>
-        </select>
+            <label for="status">Qual a relação com o imóvel?</label>
+            <select id="status" name="status" required aria-label="Status no imóvel">
+                <option value="residente">Residente</option>
+                <option value="proprietário">Proprietário</option>
+                <option value="visitante">Visitante</option>
+            </select>
 
-        <button type="submit" id="cadastro">Cadastrar</button>
-    </form>
+            <button type="submit" id="cadastro">Cadastrar</button>
+        </form>
+    </main>
 
     <script src="cadastro.js"></script>
 </body>

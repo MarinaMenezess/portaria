@@ -1,8 +1,8 @@
 require("dotenv").config();
 const express = require("express");
-const mysql = require("mysql2");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const db = require("./db_config"); // Certifique-se de que o caminho está correto
 
 const app = express();
 const PORT = 3000;
@@ -10,22 +10,6 @@ const PORT = 3000;
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-
-// Conexão com MySQL
-const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME
-});
-
-db.connect(err => {
-  if (err) {
-    console.error("Erro ao conectar ao banco:", err);
-  } else {
-    console.log("Conectado ao banco de dados.");
-  }
-});
 
 // 🚀 POST /moradores — Cadastro com restrição por status
 app.post("/moradores", (req, res) => {

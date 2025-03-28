@@ -30,6 +30,7 @@ document.getElementById("cadastroForm").addEventListener("submit", async (event)
         if (resposta.ok) {
             alert("Cadastro realizado com sucesso!");
             document.getElementById("cadastroForm").reset(); // Limpa o formulário após o cadastro
+            window.location.href = "listagem.html"; // Redireciona para listagem.html
         } else {
             alert(`Erro: ${resultado.erro || "Não foi possível cadastrar o morador."}`);
         }
